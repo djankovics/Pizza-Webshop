@@ -11,13 +11,13 @@ int main(){
     int option = 0;
 
     cout << "\n\t------------------------------------------------";
-    cout << "\n\tWelcome to the PizzaWebShop! Please login below.\n";
+    cout << "\n\tUdvozoljuk webshopunkban! Lepjen be alabb...\n";
     cout << "\t------------------------------------------------\n";
 
     do{
-        cout << "\nUsername:  ";
+        cout << "\nFelhasznalonev:  ";
         cin >> username;
-        cout << "Password:  ";
+        cout << "Jelszo:  ";
         cin >> password;
 
         if (username == "Admin" && password == "admin")
