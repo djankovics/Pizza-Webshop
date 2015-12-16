@@ -20,7 +20,7 @@ void PizzaMain::authenticate(int a)
 
 void PizzaMain::clrscr()
 {
-
+    system("cls");
 }
 
 void PizzaMain::felhasznalokatkiir()
