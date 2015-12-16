@@ -3,11 +3,6 @@
 
 using namespace std;
 
-Felhasznalo::Felhasznalo()
-{
-
-}
-
 Felhasznalo::Felhasznalo(string nev, string jelszo, int szuletesiEv, string anyjaneve, int priviledgeLevel)
 {
     setNev(nev);
