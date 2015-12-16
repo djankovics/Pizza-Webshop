@@ -10,7 +10,7 @@ public:
     void addPizza(Pizza p);
     void deletePizza(Pizza p);
     void editPizza(Pizza p);
-    void feltetHozzaad(int i, string s, Pizza p);
+    void feltetHozzaad(int i, string s);
     void listAllPizza();
 
 
