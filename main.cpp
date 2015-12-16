@@ -8,6 +8,11 @@
 
 using namespace std;
 
+namespace Error {void hiba (string error){
+    cerr << error << endl;
+    }
+}
+
 string login(){
     string username = "";
     string password = "";
@@ -68,19 +73,21 @@ int main(){
 
     if (option == 6)
     {
-        ifstream pizzak;
-        pizzak.open("pizzak.txt");
-        char output[100];
-        if (pizzak.is_open())
-        {
-           while (!pizzak.eof())
-           {
-               pizzak >> output;
-               cout <<"  " << output << endl;
-           }
-           cout <<"\n";
-        }
-       pizzak.close();
+        try{
+            ifstream pizzak;
+            pizzak.open("pizzak.txt");
+            char output[100];
+            if (!pizzak.is_open()) throw "Nincs meg a fajl!";
+
+                while (!pizzak.eof())
+                {
+                    pizzak >> output;
+                    cout <<"  " << output << endl;
+                }
+                cout <<"\n";
+
+            pizzak.close();
+       }catch(char const *error){Error::hiba(error);}
     }
     return 0;
 }
