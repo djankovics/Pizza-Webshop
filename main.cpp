@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "pizzamain.h"
 #include "admin.h"
@@ -63,5 +64,23 @@ int main(){
     }
     cout << "  Option:  ";
     cin >> option;
+    cout <<"\n";
+
+    if (option == 6)
+    {
+        ifstream pizzak;
+        pizzak.open("pizzak.txt");
+        char output[100];
+        if (pizzak.is_open())
+        {
+           while (!pizzak.eof())
+           {
+               pizzak >> output;
+               cout <<"  " << output << endl;
+           }
+           cout <<"\n";
+        }
+       pizzak.close();
+    }
     return 0;
 }
