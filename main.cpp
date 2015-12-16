@@ -54,6 +54,7 @@ int main(){
         username = login();
     } while (username == "");
 
+    do{
     if (username == "Admin")
     {
         cout << "\n  Please select option.\n";
@@ -91,5 +92,19 @@ int main(){
             pizzak.close();
        }catch(char const *error){Error::hiba(error);}
     }
+    if (option == 1)
+    {
+        try{
+            ofstream pizzak;
+            pizzak.open ("pizzak.txt", ios_base::app);
+            string addPizza = "";
+            cout << "  Pizza neve:  ";
+            cin >> addPizza;
+            pizzak << "\n" << addPizza;
+            cout << "\n  Uj pizza felveve a kinalatba.\n\n";
+            pizzak.close();
+        }catch(char const *error){Error::hiba(error);}
+    }
+    } while (option != 7);
     return 0;
 }
