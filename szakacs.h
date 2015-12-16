@@ -1,8 +1,9 @@
 #ifndef SZAKACS_H
 #define SZAKACS_H
 
+#include "felhasznalo.h"
 
-class Szakacs
+class Szakacs : public Felhasznalo
 {
 private:
     int szakacsSorSzam;
