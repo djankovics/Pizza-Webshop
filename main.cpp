@@ -1,14 +1,15 @@
 #include <iostream>
 #include <string>
 #include "pizzamain.h"
+#include "admin.h"
+#include "rendelo.h"
+#include "szakacs.h"
 
 using namespace std;
 
 string login(){
     string username = "";
     string password = "";
-    //bool loginSuccess = false;
-    //int option = 0;
 
     cout << "\nFelhasznalonev:  ";
     cin >> username;
@@ -23,8 +24,7 @@ string login(){
         cout << "\nSuccessful Login\n\n";
         return username;
     }
-    else
-    {
+    else {
         cout << "\n\tIncorrect username or password!\n";
         cout << "\tPlease try to login again.\n";
         return "";
@@ -33,6 +33,9 @@ string login(){
 
 
 int main(){
+    Admin * adminuser = new Admin("adminuser","adminjelszo",1984,"Margit",1);
+    Rendelo * rendelouser = new Rendelo("rendelouser","jelszo",1985,"Bela",3);
+    Szakacs * szakacsuser = new Szakacs("szakacsuser","jelszo",1986,"Pityu",2);
 
     string username = "";
     int option = 0;
