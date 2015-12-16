@@ -1,8 +1,9 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
+#include "felhasznalo.h"
 
-class Admin
+class Admin : public Felhasznalo
 {
 public:
     Admin();
