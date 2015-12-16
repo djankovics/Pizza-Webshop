@@ -69,6 +69,7 @@ int main(){
     }
     cout << "  Option:  ";
     cin >> option;
+
     cout <<"\n";
 
     if (option == 6)
@@ -78,14 +79,12 @@ int main(){
             pizzak.open("pizzak.txt");
             char output[100];
             if (!pizzak.is_open()) throw "Nincs meg a fajl!";
-
-                while (!pizzak.eof())
-                {
-                    pizzak >> output;
-                    cout <<"  " << output << endl;
-                }
-                cout <<"\n";
-
+            while (!pizzak.eof())
+            {
+                pizzak >> output;
+                cout <<"  " << output << endl;
+            }
+            cout <<"\n";
             pizzak.close();
        }catch(char const *error){Error::hiba(error);}
     }
