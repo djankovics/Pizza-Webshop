@@ -9,9 +9,17 @@ class Pizza
 public:
     Pizza();
 
+
+    string getFeltetek() const;
+    void setFeltetek(const string &value);
+
+    string getNev() const;
+    void setNev(const string &value);
+
+    void listPizza();
 private:
-    string Feltetek = "";
-    string Nev = "";
+    string feltetek = "";
+    string nev = "";
 
 
 };
