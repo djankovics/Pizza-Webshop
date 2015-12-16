@@ -70,6 +70,9 @@ int main(){
     cout << "  Option:  ";
     cin >> option;
 
+    PizzaMain clrscr;
+    clrscr.clrscr();
+
     cout <<"\n";
 
     if (option == 6)
