@@ -6,7 +6,13 @@
 class Rendelo : public Felhasznalo
 {
 public:
-    Rendelo();
+    Rendelo(
+            string pnev,
+            string pjelszo,
+            int pszuletesiEv,
+            string panyjaneve,
+            int ppriviledgeLevel
+            );
     void listAllPizza();
     void listAllRendeles();
     void pizzaRendeles();

@@ -6,7 +6,12 @@
 class Admin : public Felhasznalo
 {
 public:
-    Admin();
+    Admin(
+            string pnev,
+            string pjelszo,
+            int pszuletesiEv,
+            string panyjaneve,
+            int ppriviledgeLevel);
     void addPizza();
     void addSzakacs();
     void deletePizza();

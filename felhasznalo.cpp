@@ -3,13 +3,20 @@
 
 using namespace std;
 
-Felhasznalo::Felhasznalo(string nev, string jelszo, int szuletesiEv, string anyjaneve, int priviledgeLevel)
+Felhasznalo::Felhasznalo(
+        string pnev,
+        string pjelszo,
+        int pszuletesiEv,
+        string panyjaneve,
+        int ppriviledgeLevel
+        ):
+    nev(pnev),
+    jelszo(pjelszo),
+    szuletesiEv(pszuletesiEv),
+    anyjaneve(panyjaneve),
+    priviledgeLevel(ppriviledgeLevel)
 {
-    setNev(nev);
-    setJelszo(jelszo);
-    setSzuletesiEv(szuletesiEv);
-    setAnyjaneve(anyjaneve);
-    setPriviledgeLevel(priviledgeLevel);
+
 }
 
 

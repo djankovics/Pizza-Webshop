@@ -8,7 +8,13 @@ class Szakacs : public Felhasznalo
 private:
     int szakacsSorSzam;
 public:
-    Szakacs();
+    Szakacs(
+            string pnev,
+            string pjelszo,
+            int pszuletesiEv,
+            string panyjaneve,
+            int ppriviledgeLevel
+            );
     void addPizza();
     void deletePizza();
     void deleteRendeles();

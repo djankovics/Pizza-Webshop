@@ -14,13 +14,12 @@ private:
     int priviledgeLevel;
     int szuletesiEv;
 public:
-    Felhasznalo();
     Felhasznalo(
-            string nev,
-            string jelszo,
-            int szuletesiEv,
-            string anyjaneve,
-            int priviledgeLevel
+            string pnev,
+            string pjelszo,
+            int pszuletesiEv,
+            string panyjaneve,
+            int ppriviledgeLevel
             );
     string getAnyjaneve() const;
     void setAnyjaneve(const string &value);
