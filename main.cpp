@@ -1,14 +1,42 @@
 #include <iostream>
 #include <string>
-#include <list>
+//#include <list>
+
+#include "pizzamain.h"
 
 using namespace std;
+
+string login(){
+    string username = "";
+    string password = "";
+    //bool loginSuccess = false;
+    //int option = 0;
+
+    cout << "\nFelhasznalonev:  ";
+    cin >> username;
+    cout << "Jelszo:  ";
+    cin >> password;
+
+    if ( (username == "Admin" && password == "admin") ||
+         (username == "Felhasznalo" && password == "1234") ||
+         (username == "Rendelo" && password == "1234") ||
+         (username == "Szakacs" && password == "1234")
+         ){
+        cout << "\nSuccessful Login\n\n";
+        return username;
+    }
+    else
+    {
+        cout << "\n\tIncorrect username or password!\n";
+        cout << "\tPlease try to login again.\n";
+        return "";
+    }
+}
+
 
 int main(){
 
     string username = "";
-    string password = "";
-    bool loginSuccess = false;
     int option = 0;
 
     cout << "\n\t------------------------------------------------";
@@ -16,37 +44,8 @@ int main(){
     cout << "\t------------------------------------------------\n";
 
     do{
-        cout << "\nFelhasznalonev:  ";
-        cin >> username;
-        cout << "Jelszo:  ";
-        cin >> password;
-
-        if (username == "Admin" && password == "admin")
-        {
-            cout << "\nSuccessful Login\n\n";
-            loginSuccess = true;
-        }
-        else if (username == "Felhasznalo" && password == "1234")
-        {
-            cout << "\nSuccessful Login\n\n";
-            loginSuccess = true;
-        }
-        else if (username == "Rendelo" && password == "1234")
-        {
-            cout << "\nSuccessful Login\n\n";
-            loginSuccess = true;
-        }
-        else if (username == "Szakacs" && password == "1234")
-        {
-            cout << "\n Successful Login!\n\n";
-            loginSuccess = true;
-        }
-        else
-        {
-            cout << "\n\tIncorrect username or password!\n";
-            cout << "\tPlease try to login again.\n";
-        }
-    }while(!loginSuccess);
+        username = login();
+    } while (username == "");
 
     if (username == "Admin")
     {
