@@ -1,6 +1,6 @@
 #include "pizza.h"
 
-Pizza::Pizza()
+Pizza::Pizza(string pizzaneve) : nev(pizzaneve)
 {
 
 }
