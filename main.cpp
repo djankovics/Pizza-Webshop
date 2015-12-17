@@ -82,7 +82,7 @@ int main(){
         cout << " ***********************";
         cout << "\n *  6. List All Pizza  *";
         cout << "\n *  7. Log Out         *";
-        // cout << "\n *  9. Pizza Rendeles  *";
+        cout << "\n *  9. Pizza Rendeles  *";
         // cout << "\n *  10. List Rendeles  *";
         cout << "\n ***********************\n\n";
     }
