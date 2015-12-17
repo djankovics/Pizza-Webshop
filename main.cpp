@@ -86,6 +86,21 @@ int main(){
         cout << "\n ***********************\n\n";
     }
 
+    if (username == "Szakacs")
+    {
+        cout << "\n  Please select option.\n";
+        cout << " ***********************";
+        cout << "\n *  1. Add Pizza       *";
+        cout << "\n *  3. Delete Pizza    *";
+        cout << "\n *  5. Edit Pizza      *";
+        cout << "\n *  6. List All Pizza  *";
+        cout << "\n *  7. Log Out         *";
+        cout << "\n *  8. List all users  *";
+        cout << "\n * 11. List Rendelesek *";
+        cout << "\n * 12. Delete Rendeles *";
+        cout << "\n ***********************\n\n";
+    }
+
     cout << "  Option:  ";
     cin >> option;
 
@@ -94,21 +109,11 @@ int main(){
 
     cout <<"\n";
 
-    if (option == 6)
-    {
-        try{
-            pizzak->listAllPizza();
-       }catch(char const *error){Error::hiba(error);}
-    }
-    else
-        if (option == 8){
-            try {
-                pizzaprogram->felhasznalokatkiir();
-            } catch(char const *error){Error::hiba(error);}
-        }
+
+
     if (option == 1)
     {
-        try{
+        try {
             ofstream pizzak;
             pizzak.open ("pizzak.txt", ios_base::app);
             string addPizza = "";
@@ -118,6 +123,57 @@ int main(){
             cout << "\n  Uj pizza felveve a kinalatba.\n\n";
             pizzak.close();
         }catch(char const *error){Error::hiba(error);}
+    }
+
+    else if (option == 2)
+    {
+
+    }
+
+    else if (option == 3)
+    {
+
+    }
+
+    else if (option == 4)
+    {
+
+    }
+
+    else if (option == 5)
+    {
+
+    }
+
+    else if (option == 6)
+    {
+        try
+        {
+            pizzak->listAllPizza();
+        }catch(char const *error){Error::hiba(error);}
+    }
+
+    else if (option == 8)
+    {
+        try {
+                pizzaprogram->felhasznalokatkiir();
+            } catch(char const *error){Error::hiba(error);}
+        }
+    else if (option == 9)
+    {
+
+    }
+    else if (option == 10)
+    {
+
+    }
+    else if (option == 11)
+    {
+
+    }
+    else if (option == 12)
+    {
+
     }
     } while (option != 7);
 
