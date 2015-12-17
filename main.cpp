@@ -167,7 +167,7 @@ int main(){
         cout << "Melyik pizzát válaszod?";
         cin >> valasztottPizzaNeve;
         Pizza * valasztottPizza =new Pizza(valasztottPizzaNeve);
-        Rendeles megrendeles = new Rendeles(username,valasztottPizza);
+        Rendeles * megrendeles = new Rendeles(username,valasztottPizza);
     }
     else if (option == 10)
     {

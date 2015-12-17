@@ -17,6 +17,6 @@ public:
     int getId() const;
     string getTulaj() const;
     void kiir();
-
+};
 
 #endif // RENDELES_H
