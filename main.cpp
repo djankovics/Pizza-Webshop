@@ -177,7 +177,7 @@ int main(){
     {
         string valasztottPizzaNeve;
         pizzak->listAllPizza();
-        cout << "Melyik pizzát választod?";
+        cout << "Melyik pizzat valasztod?";
         cin >> valasztottPizzaNeve;
         Pizza * valasztottPizza =new Pizza(valasztottPizzaNeve);
         Rendeles * megrendeles = new Rendeles(username,valasztottPizza);
