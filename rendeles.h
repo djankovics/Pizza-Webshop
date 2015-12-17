@@ -11,13 +11,12 @@ private:
     int id;
     int sajatid;
     string tulajdonos = "";
+    Pizza rendeltpizza;
 public:
-    Rendeles();
     Rendeles(string tulaj, Pizza *p);
     int getId() const;
     string getTulaj() const;
     void kiir();
 
-};
 
 #endif // RENDELES_H

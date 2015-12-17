@@ -4,6 +4,7 @@
 #include "pizzamain.h"
 #include "admin.h"
 #include "rendelo.h"
+#include "rendeles.h"
 #include "szakacs.h"
 #include "pizzak.h"
 
@@ -64,10 +65,10 @@ int main(){
         cout << "\n  Please select option.\n";
         cout << " ***********************";
         cout << "\n *  1. Add Pizza       *";
-        cout << "\n *  2. Add Szakacs     *";
-        cout << "\n *  3. Delete Pizza    *";
-        cout << "\n *  4. Delete Szakacs  *";
-        cout << "\n *  5. Edit Pizza      *";
+        // cout << "\n *  2. Add Szakacs     *";
+        // cout << "\n *  3. Delete Pizza    *";
+        // cout << "\n *  4. Delete Szakacs  *";
+        // cout << "\n *  5. Edit Pizza      *";
         cout << "\n *  6. List All Pizza  *";
         cout << "\n *  7. Log Out         *";
         cout << "\n *  8. List all users  *";
@@ -81,8 +82,8 @@ int main(){
         cout << " ***********************";
         cout << "\n *  6. List All Pizza  *";
         cout << "\n *  7. Log Out         *";
-        cout << "\n *  9. Pizza Rendeles  *";
-        cout << "\n *  10. List Rendeles  *";
+        // cout << "\n *  9. Pizza Rendeles  *";
+        // cout << "\n *  10. List Rendeles  *";
         cout << "\n ***********************\n\n";
     }
 
@@ -91,13 +92,13 @@ int main(){
         cout << "\n  Please select option.\n";
         cout << " ***********************";
         cout << "\n *  1. Add Pizza       *";
-        cout << "\n *  3. Delete Pizza    *";
-        cout << "\n *  5. Edit Pizza      *";
+        // cout << "\n *  3. Delete Pizza    *";
+        // cout << "\n *  5. Edit Pizza      *";
         cout << "\n *  6. List All Pizza  *";
         cout << "\n *  7. Log Out         *";
-        cout << "\n *  8. List all users  *";
-        cout << "\n * 11. List Rendelesek *";
-        cout << "\n * 12. Delete Rendeles *";
+        // cout << "\n *  8. List all users  *";
+        // cout << "\n * 11. List Rendelesek *";
+        // cout << "\n * 12. Delete Rendeles *";
         cout << "\n ***********************\n\n";
     }
 
@@ -161,7 +162,12 @@ int main(){
         }
     else if (option == 9)
     {
-
+        string valasztottPizzaNeve;
+        pizzak->listAllPizza();
+        cout << "Melyik pizzát válaszod?";
+        cin >> valasztottPizzaNeve;
+        Pizza * valasztottPizza =new Pizza(valasztottPizzaNeve);
+        Rendeles megrendeles = new Rendeles(username,valasztottPizza);
     }
     else if (option == 10)
     {

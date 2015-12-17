@@ -7,7 +7,7 @@ using namespace std;
 class Pizza
 {
 public:
-    Pizza();
+    Pizza(string pizzaneve);
 
 
     string getFeltetek() const;
