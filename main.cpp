@@ -101,14 +101,27 @@ int main(){
         cout << "\n ***********************\n\n";
     }
 
-    cout << "  Option:  ";
-    cin >> option;
+
+    bool OK = false;
+    do{
+        cout << "  Option:  ";
+        cin >> option;
+        if ( (username == "Szakacs" && option == 2) ||
+             (username == "Szakacs" && option == 4) ||
+             (username == "Szakacs" && option == 9) ||
+             (username == "Szakacs" && option == 10)
+             ){
+            cout << "\n  Ehhez a menuponthoz nincs elegendo jogosultsagod\n\n";
+            } else
+        {
+            OK = true;
+        }
+    } while (OK == false);
 
     PizzaMain clrscr;
     clrscr.clrscr();
 
     cout <<"\n";
-
 
 
     if (option == 1)
