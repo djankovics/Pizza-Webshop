@@ -1,5 +1,8 @@
 #include "pizzamain.h"
 #include "felhasznalo.h"
+#include <fstream>
+#include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -25,7 +28,17 @@ void PizzaMain::clrscr()
 
 void PizzaMain::felhasznalokatkiir()
 {
-
+    ifstream felhasznalokListaja;
+    felhasznalokListaja.open("felhasznalok.txt");
+    char output[100];
+    if (!felhasznalokListaja.is_open()) throw "Nincs meg a felhasznalokat tartalmazo fajl!";
+    while (!felhasznalokListaja.eof())
+    {
+        felhasznalokListaja >> output;
+        cout <<"  " << output << endl;
+    }
+    cout <<"\n";
+    felhasznalokListaja.close();
 }
 
 void PizzaMain::felhasznalotTorol(string s)

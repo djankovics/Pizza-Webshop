@@ -5,6 +5,7 @@
 #include "admin.h"
 #include "rendelo.h"
 #include "szakacs.h"
+#include "pizzak.h"
 
 using namespace std;
 
@@ -39,6 +40,9 @@ string login(){
 
 
 int main(){
+    PizzaMain * pizzaprogram = new PizzaMain;
+    Pizzak * pizzak = new Pizzak;
+
     Admin * adminuser = new Admin("adminuser","adminjelszo",1984,"Margit",1);
     Rendelo * rendelouser = new Rendelo("rendelouser","jelszo",1985,"Bela",3);
     Szakacs * szakacsuser = new Szakacs("szakacsuser","jelszo",1986,"Pityu",2);
@@ -65,6 +69,7 @@ int main(){
         cout << "\n *  5. Edit Pizza      *";
         cout << "\n *  6. List All Pizza  *";
         cout << "\n *  7. Log Out         *";
+        cout << "\n *  8. List all users  *";
         cout << "\n ***********************\n\n";
     }
     cout << "  Option:  ";
@@ -75,18 +80,14 @@ int main(){
     if (option == 6)
     {
         try{
-            ifstream pizzak;
-            pizzak.open("pizzak.txt");
-            char output[100];
-            if (!pizzak.is_open()) throw "Nincs meg a fajl!";
-            while (!pizzak.eof())
-            {
-                pizzak >> output;
-                cout <<"  " << output << endl;
-            }
-            cout <<"\n";
-            pizzak.close();
+            pizzak->listAllPizza();
        }catch(char const *error){Error::hiba(error);}
     }
+    else
+        if (option == 8){
+            try {
+                pizzaprogram->felhasznalokatkiir();
+            } catch(char const *error){Error::hiba(error);}
+        }
     return 0;
 }
