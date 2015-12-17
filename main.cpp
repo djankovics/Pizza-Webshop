@@ -18,9 +18,9 @@ string login(){
     string username = "";
     string password = "";
 
-    cout << "\nFelhasznalonev:  ";
+    cout << "\n Felhasznalonev:  ";
     cin >> username;
-    cout << "Jelszo:  ";
+    cout << " Jelszo:  ";
     cin >> password;
 
     if ( (username == "Admin" && password == "admin") ||
@@ -28,7 +28,7 @@ string login(){
          (username == "Rendelo" && password == "1234") ||
          (username == "Szakacs" && password == "1234")
          ){
-        cout << "\nSuccessful Login\n\n";
+        cout << "\n Successful Login\n\n";
         return username;
     }
     else {
@@ -73,6 +73,19 @@ int main(){
         cout << "\n *  8. List all users  *";
         cout << "\n ***********************\n\n";
     }
+
+
+    if (username == "Rendelo")
+    {
+        cout << "\n  Please select option.\n";
+        cout << " ***********************";
+        cout << "\n *  6. List All Pizza  *";
+        cout << "\n *  7. Log Out         *";
+        cout << "\n *  9. Pizza Rendeles  *";
+        cout << "\n *  10. List Rendeles  *";
+        cout << "\n ***********************\n\n";
+    }
+
     cout << "  Option:  ";
     cin >> option;
 
