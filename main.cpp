@@ -25,7 +25,7 @@ string login(){
     cin >> password;
 
     if ( (username == "Admin" && password == "admin") ||
-         (username == "Felhasznalo" && password == "1234") ||
+         //(username == "Felhasznalo" && password == "1234") ||
          (username == "Rendelo" && password == "1234") ||
          (username == "Szakacs" && password == "1234")
          ){
