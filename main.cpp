@@ -118,9 +118,9 @@ int main(){
         }
     } while (OK == false);
 
-    PizzaMain clrscr;
-    clrscr.clrscr();
-
+//    PizzaMain clrscr;
+//    clrscr.clrscr();
+    PizzaMain::clrscr();
     cout <<"\n";
 
 

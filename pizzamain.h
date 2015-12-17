@@ -23,10 +23,11 @@ public:
             string anyjaNeve
         );
     void authenticate(int a);
-    void clrscr();
     void felhasznalokatkiir();
     void felhasznalotTorol(string s);
     void reg(string a, string p1, string p2);
+    static void clrscr();
+
 };
 
 #endif // PIZZAMAIN_H
